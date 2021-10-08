@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/IList")
+@RequestMapping("/ilist")
 public class IListResource {
     private final IListService IListService;
 
-    public IListResource(com.spiderman.backendAPI.service.IListService IListService) {
+    public IListResource(IListService IListService) {
         this.IListService = IListService;
     }
 

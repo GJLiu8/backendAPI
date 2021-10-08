@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/iBlog")
+@RequestMapping("/IBlog")
 public class IBlogResource {
     private final IBlogService iBlogService;
 

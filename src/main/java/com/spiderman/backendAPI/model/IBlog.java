@@ -16,12 +16,12 @@ public class IBlog implements Serializable {
     private String content;
     private String comment;
     private Long userID;
-    private Long like;
+    private Long likes;
 
     public IBlog() {
     }
 
-    public IBlog(Long id, Long imgId, Date time, String title, String content, String comment, Long userID, Long like) {
+    public IBlog(Long id, Long imgId, Date time, String title, String content, String comment, Long userID, Long likes) {
         this.id = id;
         this.imgId = imgId;
         this.time = time;
@@ -29,7 +29,7 @@ public class IBlog implements Serializable {
         this.content = content;
         this.comment = comment;
         this.userID = userID;
-        this.like = like;
+        this.likes = likes;
     }
 
     public Long getId() {
@@ -88,12 +88,12 @@ public class IBlog implements Serializable {
         this.userID = userID;
     }
 
-    public Long getLike() {
-        return like;
+    public Long getLikes() {
+        return likes;
     }
 
-    public void setLike(Long like) {
-        this.like = like;
+    public void setLikes(Long likes) {
+        this.likes = likes;
     }
 
     @Override
@@ -106,7 +106,7 @@ public class IBlog implements Serializable {
                 ", content='" + content + '\'' +
                 ", comment='" + comment + '\'' +
                 ", userID=" + userID +
-                ", like=" + like +
+                ", likes=" + likes +
                 '}';
     }
 }

@@ -11,32 +11,32 @@ import java.util.List;
 
 @Service
 public class IBlogService {
-    private final IBlogRepo iIBlogRepo;
+    private final IBlogRepo iBlogRepo;
 
     @Autowired
     public IBlogService(IBlogRepo iIBlogRepo) {
-        this.iIBlogRepo = iIBlogRepo;
+        this.iBlogRepo = iIBlogRepo;
     }
 
     public IBlog addIBlog(IBlog iIBlog) {
-        return iIBlogRepo.save(iIBlog);
+        return iBlogRepo.save(iIBlog);
     }
 
     public List<IBlog> findAllIBlogs() {
-        return iIBlogRepo.findAll();
+        return iBlogRepo.findAll();
     }
 
     public IBlog updateIBlog(IBlog iIBlog) {
-        return iIBlogRepo.save(iIBlog);
+        return iBlogRepo.save(iIBlog);
     }
 
     public IBlog findIBlogById(Long id) {
-        return iIBlogRepo.findIBlogById(id)
+        return iBlogRepo.findIBlogById(id)
                 .orElseThrow(() -> new IBlogNotFoundException("IBlog by id " + id + " was not found"));
     }
 
     @Transactional
     public void deleteIBlog(Long id){
-        iIBlogRepo.deleteIBlogById(id);
+        iBlogRepo.deleteIBlogById(id);
     }
 }
